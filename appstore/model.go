@@ -202,11 +202,12 @@ type (
 	}
 
 	PurchaseIAPResponse struct {
-		AutoRenewStatus    uint32          `json:"auto_renew_status"` // 续费商品才有
-		Status             uint32          `json:"status"`
-		AutoRenewProductId string          `json:"auto_renew_product_id"` // 续费商品才有
-		Receipt            PurchaseReceipt `json:"receipt"`
-		LatestReceiptInfo  PurchaseReceipt `json:"latest_receipt_info"` // 续费商品才有
-		LatestReceipt      string          `json:"latest_receipt"`      // 续费商品才有
+		AutoRenewStatus         uint32          `json:"auto_renew_status"` // 续费商品才有
+		Status                  uint32          `json:"status"`
+		AutoRenewProductId      string          `json:"auto_renew_product_id"` // 续费商品才有
+		Receipt                 PurchaseReceipt `json:"receipt"`
+		LatestReceiptInfo       PurchaseReceipt `json:"latest_receipt_info"`         // 续费商品才有
+		LatestExpireReceiptInfo PurchaseReceipt `json:"latest_expired_receipt_info"` // 续费商品才有
+		LatestReceipt           string          `json:"latest_receipt"`              // 续费商品才有
 	}
 )
