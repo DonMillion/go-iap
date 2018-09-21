@@ -176,29 +176,35 @@ type (
 
 	// 购买返回的receipt (receipt for purchase result)
 	PurchaseReceipt struct {
-		Quantity                  string `json:"quantity,omitempty"`                    //"quantity": "1",
-		UniqueVendorIdentifier    string `json:"unique_vendor_identifier,omitempty"`    //"unique_vendor_identifier": "C8C17B66-394D-46C6-996C-3AF7CF46876C",
-		Bvrs                      string `json:"bvrs,omitempty"`                        //"bvrs": "9",
-		AppItemId                 string `json:"app_item_id,omitempty"`                 //"app_item_id": "557130558",
-		ExpiresDate               string `json:"expires_date,omitempty"`                //"expires_date": "1538917472000",
-		ExpiresDateFormatted      string `json:"expires_date_formatted,omitempty"`      //"expires_date_formatted": "2018-10-07 13:04:32 Etc/GMT",
-		ExpiresDateFormattedPST   string `json:"expires_date_formatted_pst,omitempty"`  //"expires_date_formatted_pst": "2018-10-07 06:04:32 America/Los_Angeles",
-		IsInIntroOfferPeriod      string `json:"is_in_intro_offer_period,omitempty"`    //"is_in_intro_offer_period": "false",
-		IsTrialPeriod             string `json:"is_trial_period,omitempty"`             //"is_trial_period": "false",
-		ItemId                    string `json:"item_id,omitempty"`                     //"item_id": "1141778299",
-		UniqueIdentifier          string `json:"unique_identifier,omitempty"`           //"unique_identifier": "e0d914df721ba7e321222382732ed4f38962b7c5",
-		OriginalTransactionId     string `json:"original_transaction_id,omitempty"`     //"original_transaction_id": "220000492510109",
-		TransactionId             string `json:"transaction_id,omitempty"`              //"transaction_id": "220000492510109",
-		WebOrderLineItemId        string `json:"web_order_line_item_id,omitempty"`      //"web_order_line_item_id": "220000131547633",
-		Bid                       string `json:"bid,omitempty"`                         //"bid": "com.helloTalk.helloTalk",
-		ProductId                 string `json:"product_id,omitempty"`                  //"product_id": "com.hellotalk.monthauto",
-		PurchaseDate              string `json:"purchase_date,omitempty"`               //"purchase_date": "2018-09-07 13:04:32 Etc/GMT",
-		PurchaseDateMS            string `json:"purchase_date_ms,omitempty"`            //"purchase_date_ms": "1536325472000",
-		PurchaseDatePST           string `json:"purchase_date_pst,omitempty"`           //"purchase_date_pst": "2018-09-07 06:04:32 America/Los_Angeles",
-		OriginalPurchaseDate      string `json:"original_purchase_date,omitempty"`      //"original_purchase_date": "2018-09-07 13:04:34 Etc/GMT",
-		OriginalPurchaseDateMS    string `json:"original_purchase_date_ms,omitempty"`   //"original_purchase_date_ms": "1536325474000",
-		OriginalPurchaseDatePST   string `json:"original_purchase_date_pst,omitempty"`  //"original_purchase_date_pst": "2018-09-07 06:04:34 America/Los_Angeles",
-		VersionExternalIdentifier string `json:"version_external_identifier,omitempty"` //"version_external_identifier": "828156491",
+		Quantity                  string `json:"quantity,omitempty"`                    // "quantity": "1",
+		UniqueVendorIdentifier    string `json:"unique_vendor_identifier,omitempty"`    // "unique_vendor_identifier": "C8C17B66-394D-46C6-996C-3AF7CF46876C",
+		Bvrs                      string `json:"bvrs,omitempty"`                        // "bvrs": "9",
+		AppItemId                 string `json:"app_item_id,omitempty"`                 // "app_item_id": "557130558",
+		ExpiresDate               string `json:"expires_date,omitempty"`                // "expires_date": "1538917472000",
+		ExpiresDateFormatted      string `json:"expires_date_formatted,omitempty"`      // "expires_date_formatted": "2018-10-07 13:04:32 Etc/GMT",
+		ExpiresDateFormattedPST   string `json:"expires_date_formatted_pst,omitempty"`  // "expires_date_formatted_pst": "2018-10-07 06:04:32 America/Los_Angeles",
+		IsInIntroOfferPeriod      string `json:"is_in_intro_offer_period,omitempty"`    // "is_in_intro_offer_period": "false",
+		IsTrialPeriod             string `json:"is_trial_period,omitempty"`             // "is_trial_period": "false",
+		ItemId                    string `json:"item_id,omitempty"`                     // "item_id": "1141778299",
+		UniqueIdentifier          string `json:"unique_identifier,omitempty"`           // "unique_identifier": "e0d914df721ba7e321222382732ed4f38962b7c5",
+		OriginalTransactionId     string `json:"original_transaction_id,omitempty"`     // "original_transaction_id": "220000492510109",
+		TransactionId             string `json:"transaction_id,omitempty"`              // "transaction_id": "220000492510109",
+		WebOrderLineItemId        string `json:"web_order_line_item_id,omitempty"`      // "web_order_line_item_id": "220000131547633",
+		Bid                       string `json:"bid,omitempty"`                         // "bid": "com.helloTalk.helloTalk",
+		ProductId                 string `json:"product_id,omitempty"`                  // "product_id": "com.hellotalk.monthauto",
+		PurchaseDate              string `json:"purchase_date,omitempty"`               // "purchase_date": "2018-09-07 13:04:32 Etc/GMT",
+		PurchaseDateMS            string `json:"purchase_date_ms,omitempty"`            // "purchase_date_ms": "1536325472000",
+		PurchaseDatePST           string `json:"purchase_date_pst,omitempty"`           // "purchase_date_pst": "2018-09-07 06:04:32 America/Los_Angeles",
+		OriginalPurchaseDate      string `json:"original_purchase_date,omitempty"`      // "original_purchase_date": "2018-09-07 13:04:34 Etc/GMT",
+		OriginalPurchaseDateMS    string `json:"original_purchase_date_ms,omitempty"`   // "original_purchase_date_ms": "1536325474000",
+		OriginalPurchaseDatePST   string `json:"original_purchase_date_pst,omitempty"`  // "original_purchase_date_pst": "2018-09-07 06:04:34 America/Los_Angeles",
+		VersionExternalIdentifier string `json:"version_external_identifier,omitempty"` // "version_external_identifier": "828156491",
+		BundleID                  string `json:"bundle_id"`
+		ApplicationVersion        string `json:"application_version"`
+		CreationDate              string `json:"receipt_creation_date"`
+		CreationDateMS            string `json:"receipt_creation_date_ms"`
+		CreationDatePST           string `json:"receipt_creation_date_pst"`
+		IsInBillingRetryPeriod    string `is_in_billing_retry_period`
 	}
 
 	PurchaseIAPResponse struct {
