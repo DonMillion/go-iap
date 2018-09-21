@@ -176,28 +176,28 @@ type (
 
 	// 购买返回的receipt (receipt for purchase result)
 	PurchaseReceipt struct {
-		OriginalPurchaseDatePST   string `json:"original_purchase_date_pst,omitempty"`
 		Quantity                  string `json:"quantity,omitempty"`
 		UniqueVendorIdentifier    string `json:"unique_vendor_identifier,omitempty"`
 		Bvrs                      string `json:"bvrs,omitempty"`
+		AppItemId                 string `json:"app_item_id,omitempty"`
+		ExpiresDate               string `json:"expires_date,omitempty"`
 		ExpiresDateFormatted      string `json:"expires_date_formatted,omitempty"`
+		ExpiresDateFormattedPST   string `json:"expires_date_formatted_pst,omitempty"`
 		IsInIntroOfferPeriod      string `json:"is_in_intro_offer_period,omitempty"`
-		PurchaseDateMs            string `json:"purchase_date_ms,omitempty"`
-		ExpiresDateFormattedPst   string `json:"expires_date_formatted_pst,omitempty"`
 		IsTrialPeriod             string `json:"is_trial_period,omitempty"`
 		ItemId                    string `json:"item_id,omitempty"`
 		UniqueIdentifier          string `json:"unique_identifier,omitempty"`
 		OriginalTransactionId     string `json:"original_transaction_id,omitempty"`
-		ExpiresDate               string `json:"expires_date,omitempty"`
-		AppItemId                 string `json:"app_item_id,omitempty"`
 		TransactionId             string `json:"transaction_id,omitempty"`
 		WebOrderLineItemId        string `json:"web_order_line_item_id,omitempty"`
 		Bid                       string `json:"bid,omitempty"`
 		ProductId                 string `json:"product_id,omitempty"`
 		PurchaseDate              string `json:"purchase_date,omitempty"`
+		PurchaseDateMS            string `json:"purchase_date_ms,omitempty"`
+		PurchaseDatePST           string `json:"purchase_date_pst,omitempty"`
 		OriginalPurchaseDate      string `json:"original_purchase_date,omitempty"`
-		PurchaseDatePst           string `json:"purchase_date_pst,omitempty"`
-		OriginalPurchaseDateMs    string `json:"original_purchase_date_ms,omitempty"`
+		OriginalPurchaseDateMS    string `json:"original_purchase_date_ms,omitempty"`
+		OriginalPurchaseDatePST   string `json:"original_purchase_date_pst,omitempty"`
 		VersionExternalIdentifier string `json:"version_external_identifier,omitempty"`
 	}
 
