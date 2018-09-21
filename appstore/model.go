@@ -204,7 +204,6 @@ type (
 		CreationDate              string `json:"receipt_creation_date"`
 		CreationDateMS            string `json:"receipt_creation_date_ms"`
 		CreationDatePST           string `json:"receipt_creation_date_pst"`
-		IsInBillingRetryPeriod    string `is_in_billing_retry_period`
 	}
 
 	PurchaseIAPResponse struct {
@@ -215,5 +214,6 @@ type (
 		LatestReceiptInfo       PurchaseReceipt `json:"latest_receipt_info"`         // 续费商品才有
 		LatestExpireReceiptInfo PurchaseReceipt `json:"latest_expired_receipt_info"` // 续费商品才有
 		LatestReceipt           string          `json:"latest_receipt"`              // 续费商品才有
+		IsInBillingRetryPeriod  string          `json:"is_in_billing_retry_period"`
 	}
 )
