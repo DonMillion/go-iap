@@ -29,6 +29,7 @@ type Client struct {
 	ProductionURL string
 	SandboxURL    string
 	httpCli       *http.Client
+	IsProduct     bool
 }
 
 // HandleError returns error message by status code
@@ -75,10 +76,11 @@ func HandleError(status int) error {
 }
 
 // New creates a client object
-func New() *Client {
+func New(isProduct bool) *Client {
 	client := &Client{
 		ProductionURL: ProductionURL,
 		SandboxURL:    SandboxURL,
+		IsProduct:     isProduct,
 		httpCli: &http.Client{
 			Timeout: 10 * time.Second,
 		},
@@ -87,11 +89,12 @@ func New() *Client {
 }
 
 // NewWithClient creates a client with a custom http client.
-func NewWithClient(client *http.Client) *Client {
+func NewWithClient(client *http.Client, isProduct bool) *Client {
 	return &Client{
 		ProductionURL: ProductionURL,
 		SandboxURL:    SandboxURL,
 		httpCli:       client,
+		IsProduct:     isProduct,
 	}
 }
 
@@ -132,7 +135,7 @@ func (c *Client) parseResponse(resp *http.Response, result interface{}, ctx cont
 	if err != nil {
 		return err
 	}
-	if r.Status == 21007 {
+	if c.IsProduct == false && r.Status == 21007 {
 		b := new(bytes.Buffer)
 		json.NewEncoder(b).Encode(reqBody)
 
